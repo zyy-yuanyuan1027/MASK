@@ -1,4 +1,4 @@
-# Tn-S1-Network
+# mask-Tn-S1-Network
 Vision Transformer Model of Multi teacher Knowledge Distillation and Self supervised Learning.
 ## Training
 ### Documentation
@@ -9,7 +9,7 @@ Here we are using the source code of the DINO model trained on three datasets.
 python main_dino.py
 ```
 ### Training of T2-S1 model
-The Vision Transformer model for self-supervised learning of two teacher networks and one student network that we use in the article is trained on three datasets.
+The visual converter model for self supervised learning of two teacher networks and one student network based on mask mechanism and multi teacher knowledge distillation used in our article was trained on three datasets.
 ```
 python T2-S1 Network.py
 ```
