@@ -29,7 +29,7 @@ Evaluate a visual converter model for self supervised learning of two teacher ne
 ```
 python linear-t2.py
 ```
-### Evaluation of the T3-S1 model
+### Evaluation of the Mask-T3-S1 model
 Evaluate a visual converter model for self supervised learning of three teacher networks and one student network based on mask mechanism and multi teacher knowledge distillation on multiple datasets using the method of directly adding feature dimensions.
 ```
 python linear-t3.py
