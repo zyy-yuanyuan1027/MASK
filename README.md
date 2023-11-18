@@ -8,47 +8,31 @@ Here we are using the source code of the DINO model trained on three datasets.
 ```
 python main_dino.py
 ```
-### Training of T2-S1 model
+### Training of Mask-T2-S1 model
 The visual converter model for self supervised learning of two teacher networks and one student network based on mask mechanism and multi teacher knowledge distillation used in our article was trained on three datasets.
 ```
-python T2-S1 Network.py
+python main_dino_t2 Network.py
 ```
-### Training of T3-S1 model
-The Vision Transformer model for self-supervised learning of three teacher networks and one student network that we use in the article is trained on three datasets.
+### Training of Mask-T3-S1 model
+The visual converter model for self supervised learning of three teacher networks and one student network based on mask mechanism and multi teacher knowledge distillation used in our article was trained on three datasets.
 ```
-python T3-S1 Network.py
+python main_dino_t3 Network.py
 ```
 ## Evaluation
-In this paper, two approaches are proposed for the evaluation of the multi-teacher knowledge distillation architecture. One method is to stitch together the feature dimensions in multiple model output tensors, and the other is to directly add the output tensors while keeping the feature dimensions unchanged.
+This article adopts the method of directly adding output tensors while keeping the feature dimensions unchanged to evaluate the architecture based on mask mechanism and multi teacher knowledge distillation
 ### Evaluation of the DINO model
 ```
 python linear.py
 ```
-### Evaluation of the T2-S1 model
-The Vision Transformer model for self-supervised learning of two teacher networks and one student network is evaluated on the dataset using the first feature-dimension combination method.
+### Evaluation of the Mask-T2-S1 model
+Evaluate a visual converter model for self supervised learning of two teacher networks and one student network based on mask mechanism and multi teacher knowledge distillation on multiple datasets using the method of directly adding feature dimensions.
 ```
-python T2-S1-cat.py
-```
-A Vision Transformer model for self-supervised learning of two teacher networks and one student network is evaluated on the dataset using the second feature dimension combination method.
-```
-python T2-S1-add.py
+python linear-t2.py
 ```
 ### Evaluation of the T3-S1 model
-The Vision Transformer model for self-supervised learning of three teacher networks and one student network is evaluated on the dataset using the first feature-dimension combination method.
+Evaluate a visual converter model for self supervised learning of three teacher networks and one student network based on mask mechanism and multi teacher knowledge distillation on multiple datasets using the method of directly adding feature dimensions.
 ```
-python T3-S1-cat.py
+python linear-t3.py
 ```
-A Vision Transformer model for self-supervised learning of three teacher networks and one student network is evaluated on the dataset using the second feature dimension combination method.
-```
-python T3-S1-add.py
-```
-## Attention Image Visualization
-We can see the self-attention of the [CLS] tokens of the DINO model on different heads of the last layer by running the code:
-```
-python visualize_attention.py
-```
-We can see the self-attention of the [CLS] tokens of the T2-S1 model used in the paper on different heads of the last layer by applying the following code:
-```
-python visualize_attention_t2.py
-```
+
 
